@@ -5,14 +5,9 @@ fun main() {
     val minFromMax: MutableList<Int> = mutableListOf()
 
     for ((index, num) in array.withIndex()) {
-        if (num == 2) {
-            arrayOfIndex2.add(index)
-        }
-    }
-
-    for ((index, num) in array.withIndex()) {
-        if (num == 1) {
-            arrayOfIndex1.add(index)
+        when (num) {
+            1 -> arrayOfIndex1.add(index)
+            2 -> arrayOfIndex2.add(index)
         }
     }
 
